@@ -43,20 +43,20 @@ public class QRcodeReaderScript : MonoBehaviour
 
             try
             {
+                //QR読取処理。？非同期処理したい。？
+                // 非同期処理した場合QRから抽出した文字列を
+                // ボタンに繁栄できるか？
                 IBarcodeReader barcodeReader = new BarcodeReader ();
                 // decode the current frame
                 var result = barcodeReader.Decode(webCamTexture.GetPixels32(), webCamTexture.width, webCamTexture.height);
                 if (result != null) {
-                    Debug.Log("DECODED TEXT FROM QR: " + result.Text);
                     this.Button.GetComponentInChildren<Text>().text = result.Text;
                 }
             } 
             catch
             { 
                 Debug.LogWarning ("Error");
-            }        
-                
+            }         
         }      
     }
-
 }
