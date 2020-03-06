@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/MainScene.unity
+    guid: 2e86ab6ed4ce0114e98eb1e75ee0944c
+  - enabled: 1
     path: Assets/QRcodeReaderScene.unity
     guid: 0b207ba80b5e74d4aa4797d1046ba9fe
+  - enabled: 1
+    path: Assets/HistoryScene.unity
+    guid: 0b03866c117c12f42ae2c1d320aee344
   m_configObjects: {}

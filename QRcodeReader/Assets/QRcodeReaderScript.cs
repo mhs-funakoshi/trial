@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading;
+using System.Threading.Tasks;
 using ZXing;
 using ZXing.QrCode;
 
@@ -20,7 +22,7 @@ public class QRcodeReaderScript : MonoBehaviour
     }
     void Start()
     {
-        this.Button = GameObject.Find("Button");
+        this.Button = GameObject.Find("MainButton");
         webCamTexture = new WebCamTexture(Screen.currentResolution.width,
                                           Screen.currentResolution.height);
         rawImage.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.currentResolution.width,
@@ -30,7 +32,7 @@ public class QRcodeReaderScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
         if (webCamTexture?.isPlaying ?? false)
         {   
@@ -56,4 +58,5 @@ public class QRcodeReaderScript : MonoBehaviour
                 
         }      
     }
+
 }
